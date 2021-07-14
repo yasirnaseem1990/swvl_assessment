@@ -1,7 +1,7 @@
 # swvl_assessment
 Swvl Assessment Test
 
-#  A Simple Popular Movies App Using Latest Android Development techniques
+#  A Simple Movies App Using Latest Android Development techniques
 Movies Application in which user can able to see the movies along with their Title, Year and rating. 
 Movies List is searchable and the search result will be categorized by **Year**
 Each Search result category will hold at the most movies of this category by Year.
