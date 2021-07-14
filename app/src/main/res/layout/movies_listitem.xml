@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.swvl.assessmenttest.viewmodel.movies.MoviesListItemViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/restaurantListCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:elevation="@dimen/_20sdp"
+        android:backgroundTint="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> viewModel.onItemClicked()}">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/movieTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="8dp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@{viewModel.movieTitle}"
+                android:textColor="@color/color_dashboard_bg"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="(500) Days of Summer" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/movieYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@{viewModel.movieYear}"
+                android:alpha="0.90"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/color_dashboard_bg"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/movieTitle"
+                app:layout_constraintTop_toBottomOf="@+id/movieTitle"
+                tools:text="(500) Days of Summer" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMenuItemRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:drawableStart="@drawable/ico_rating"
+                android:drawablePadding="@dimen/_4sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@{viewModel.movieRating}"
+                android:textColor="@color/color_rating"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/movieYear"
+                app:layout_constraintTop_toBottomOf="@+id/movieYear"
+                tools:text="4.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

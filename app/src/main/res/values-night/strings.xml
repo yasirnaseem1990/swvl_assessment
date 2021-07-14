@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="movies_world">Movies World</string>
+    <string name="home">Home</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="Movies">Movies</string>
+    <string name="search_movies">Search Movies</string>
+</resources>
