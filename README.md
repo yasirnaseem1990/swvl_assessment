@@ -16,7 +16,6 @@ Android JetPack Navigation Component | I am following Single Activity Approach f
 Coroutines  | Asynchronous calls to database/network
 KOIN DI | I have used KOIN as a Dependency Injection to ijnect ViewModel, Network and Repository
 Coil | Image Loading Kotlin base library
-accomponist-Glide | Loading images from network in compose
 Databinding | Connecting data to xml and inflating layouts 
 ViewBinding | Use third party library for view binding to access the xml component
 retrofit | making network request/ logging network requests 
